@@ -1,0 +1,91 @@
+// this is my visual studio code settings file.
+// Place your key bindings in this file to override the defaultsauto[]
+// merge this file with home/<username>/.config/code/User/
+[
+    // for moving selected letters left side
+    {
+        "key": "alt+left",
+        "command": "editor.action.moveCarretLeftAction"
+    },
+
+    // for moving selected letters right side
+    {
+        "key": "alt+right",
+        "command": "editor.action.moveCarretRightAction"
+    },
+
+    // for copying selected lines downside
+    {
+        "key": "ctrl+shift+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // was for copying selected lines upside but in my pc it was not working.  
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // for copying selected lines upside
+    {
+        "key": "ctrl+shift+up",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // was for copying selected lines downside but in my pc it was not working.  
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // was for deleting the current line entirely. 
+    {
+        "key": "ctrl+shift+/",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+
+    // cycle through terminals ( was used to delete lines entirely)
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+
+    // cycle through terminals focus next terminal
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.terminal.focusNext"
+    },
+
+    // cycle through terminals focus previous
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+
+    // for toggling between full terminal and half terminal
+    {
+        "key": "ctrl+alt+m",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "!terminalFocus"
+    },
+
+    // was for toggling terminal removed now
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "!terminalFocus"
+    },
+
+    // also used for toggling terminal
+    {
+        "key": "ctrl+alt+m",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus"
+    }
+]
