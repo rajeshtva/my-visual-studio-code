@@ -1,0 +1,126 @@
+{
+  // Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "typdefs": {
+    "prefix": "typed",
+    "body": [
+      "//All Typedef's are here.",
+      "typedef long long ll;",
+
+      "typedef vector<ll> vll;",
+      "typedef vector<int> vi;",
+      "typedef set<int> si;",
+      "typedef set<ll> sll;",
+      "typedef vi::iterator viI;",
+      "typedef sll::iterator sllI;",
+      "typedef vector<string> vs;",
+      "typedef pair<int, int> pii;",
+      "typedef map<int, int> mii;"
+    ],
+    "description": "all typedef's are defined here."
+  },
+
+  "includes": {
+    "prefix": "#in",
+    "body": ["#include <bits/stdc++.h>", "using namespace std;"],
+    "description": "header file for all including namespace std globally"
+  },
+
+  "inputs and outputs": {
+    "description": "input file name and outfile name",
+    "body": [
+      "//input file and outfile ",
+      "ifstream yyy(\"input.txt\");",
+      "ofstream zzz(\"output.txt\");"
+    ],
+    "prefix": "yy"
+  },
+  "prime_factors": {
+    "description": "calculate prime factors in O(n), optmized algorithms",
+    "body": [
+      "vector<int> prime_factors(int n)",
+      "{",
+      "    vector<int> prime_factors;",
+      "    for (int i = 0; i * i <= n; i++) {",
+      "        while (n % i == 0) {",
+      "            prime_factors.push_back(i);",
+      "            n /= i;",
+      "        }",
+      "    }",
+
+      "    if (n > 1) {",
+      "        prime_factors.push_back(n);",
+      "    }",
+
+      "    return prime_factors;",
+      "}"
+    ],
+    "prefix": "findallprimefactors"
+  },
+  "print2dvector": {
+    "description": "prints 2d vector",
+    "body": [
+      "          for (int i = 0; i < ${1:output}.size(); i++) {",
+      "            for (int j = 0; j < ${1:output}[i].size(); j++) {",
+      "                ${2:cout << ${1:output}[i][j] << \" \";}",
+      "            }",
+      "            cout << endl;",
+      "        }"
+    ],
+    "prefix": "pri2dv"
+  },
+  "print1dvector": {
+    "description": "prints 1d vector",
+    "body": [
+      "              for (int i = 0; i < output.size(); i++) {",
+      "            cout << output[i] << endl;",
+      "        }"
+    ],
+    "prefix": "pri1dv"
+  },
+  "cin2dv": {
+    "body": [
+      "        int ${3:row}, ${4:column};",
+      "        cin >> ${3:row} >> ${4:column};",
+      "\n",
+      "        vector<vector<${1:int}>>${2:input}(${3:row},vector<${1:int}>(${4:column}));",
+      "\n",
+      "        for(int i = 0; i < ${3:row};i++){",
+      "            for(int j = 0; j<${4:column}; j++){",
+      "                cin >> ${2:input}[i][j];",
+      "            }",
+      "        }"
+    ],
+    "description": "inputs 2d vector",
+    "prefix": "cin2dv"
+  },
+  "cin1dv": {
+    "body": [
+      "        int ${3:n};",
+      "        cin >> ${3:n};",
+      "        vector<${1:int}> input(${3:n});",
+      "        for (int i = 0; i < ${3:n}; i++)",
+      "            cin >> ${2:input}[i];"
+    ],
+    "description": "inputs 1d vector",
+    "prefix": "cin1dv"
+  },
+  "insertStarComment":{
+    "body": "/** ${1:comment} */",
+    "description": "insert start comments between actual syntax",
+    "prefix": "/"
+  }
+}
+
