@@ -1,78 +1,269 @@
-// here things are self explainotary. no need to define anything :
-// merge this file with home/<username>/.config/code/User/
 {
-    "editor.quickSuggestions.comments": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Monokai",
-    "editor.fontSize": 21,
-    "window.zoomLevel": -1,
-    "terminal.integrated.fontSize": 18,
-    "code-runner.saveFileBeforeRun": true,
-    "code-runner.saveAllFilesBeforeRun": true,
-    "code-runner.runInTerminal": true,
-    "editor.minimap.enabled": false,
-    "code-runner.executorMap": {
-        "javascript": "node",
-        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "php": "php",
-        "python": "python3 -u",
-        "perl": "perl",
-        "perl6": "perl6",
-        "ruby": "ruby",
-        "go": "go run",
-        "lua": "lua",
-        "groovy": "groovy",
-        "powershell": "powershell -ExecutionPolicy ByPass -File",
-        "bat": "cmd /c",
-        "shellscript": "bash",
-        "fsharp": "fsi",
-        "csharp": "scriptcs",
-        "vbscript": "cscript //Nologo",
-        "typescript": "ts-node",
-        "coffeescript": "coffee",
-        "scala": "scala",
-        "swift": "swift",
-        "julia": "julia",
-        "crystal": "crystal",
-        "ocaml": "ocaml",
-        "r": "Rscript",
-        "applescript": "osascript",
-        "clojure": "lein exec",
-        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-        "racket": "racket",
-        "scheme": "csi -script",
-        "ahk": "autohotkey",
-        "autoit": "autoit3",
-        "dart": "dart",
-        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-        "haskell": "runhaskell",
-        "nim": "nim compile --verbosity:0 --hints:off --run",
-        "lisp": "sbcl --script",
-        "kit": "kitc --run",
-        "v": "v run",
-        "sass": "sass --style expanded",
-        "scss": "scss --style expanded"
+  "workbench.settings.openDefaultKeybindings": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "sqlite.sqlite3": "/usr/bin/sqlite3",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  "extensions.ignoreRecommendations": true,
+  "explorer.confirmDragAndDrop": false,
+  "telemetry.telemetryLevel": "off",
+  "files.insertFinalNewline": true,
+  "zenMode.silentNotifications": true,
+  "terminal.integrated.fontSize": 19,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.runInTerminal": true,
+  "window.restoreFullscreen": true,
+  "window.restoreWindows": "all",
+  // "debug.console.fontSize": 16,
+  // "terminal.integrated.fontWeightBold": "bold",
+  "terminal.integrated.lineHeight": 0,
+  "workbench.commandPalette.preserveInput": true,
+  "window.newWindowDimensions": "fullscreen",
+  "workbench.quickOpen.preserveInput": true,
+  "workbench.colorCustomizations": {
+    // "editor.background": "#1f1f1f"
+  },
+  "editor.glyphMargin": false,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "code-runner.executorMap": {
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && timeout -s SIGKILL 5s $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -fsanitize=address && timeout -s SIGKILL 5s $dir$fileNameWithoutExt",
+    "python": "python3 -u"
+  },
+  "vim.useSystemClipboard": true,
+  "workbench.sideBar.location": "left",
+  "vim.enableNeovim": true,
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
+
+  "settings.cycle": [
+    {
+      "id": "toggle_debug_mode_margin",
+      "values": [
+        {
+          "editor.glyphMargin": true,
+          "editor.lineNumbers": "relative"
+        },
+        {
+          "editor.glyphMargin": false,
+          "editor.lineNumbers": "off"
+        }
+      ]
     },
-    "window.restoreFullscreen": true,
-    "window.restoreWindows": "all",
-    "debug.console.fontSize": 16,
-    "terminal.integrated.fontWeightBold": "bold",
-    "terminal.integrated.lineHeight": 0.5,
-    "workbench.commandPalette.preserveInput": true,
-    "workbench.startupEditor": "none",
-    "window.newWindowDimensions": "fullscreen",
-    "workbench.quickOpen.preserveInput": true,
-    "enableTelemetry": true,
-    // "workbench.colorCustomizations": {
-    //     "editor.background": "#000",
-    // },
+    {
+      "id": "toggle_indentation_guide",
+      "values": [
+        {
+          "editor.guides.indentation": false
+        },
+        {
+          "editor.guides.indentation": true
+        }
+      ]
+    },
+    {
+      "id": "toggle_status_bar",
+      "values": []
+    }
+  ],
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tailwindCSS.colorDecorators": true,
+  "tailwindCSS.emmetCompletions": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "search.useIgnoreFiles": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "svg.preview.mode": "svg",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  // "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.executablePathWindows": "${fileWorkspaceFolder}/tools/php-cs-fixer/vendor/bin/php-cs-fixer", //eg: php-cs-fixer.bat
+  "php-cs-fixer.onsave": false,
+  "php-cs-fixer.rules": "@PSR12",
+  "php-cs-fixer.config": ".php-cs-fixer.php;.php-cs-fixer.dist.php;.php_cs;.php_cs.dist",
+  "php-cs-fixer.allowRisky": false,
+  "php-cs-fixer.pathMode": "override",
+  "php-cs-fixer.exclude": [],
+  "php-cs-fixer.autoFixByBracket": true,
+  "php-cs-fixer.autoFixBySemicolon": false,
+  "php-cs-fixer.formatHtml": false,
+  "php-cs-fixer.documentFormattingProvider": true,
+  "python.terminal.activateEnvironment": true,
+  "terminal.integrated.inheritEnv": false,
+  "search.exclude": {
+    "**/node_modules": false
+  },
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.guides.bracketPairsHorizontal": true,
+  "workbench.tree.indent": 4,
+  "files.associations": {
+    "*.html": "html",
+    "*.vue": "vue"
+  },
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "[django-html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.mouseWheelZoom": true,
+  "codesnap.showLineNumbers": false,
+  "codesnap.target": "window",
+  "vim.camelCaseMotion.enable": true,
+  "emmet.excludeLanguages": ["markdown", "php"],
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.autofetch": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": false,
+  "gitlens.gitCommands.skipConfirmations": [
+    "fetch:command",
+    "stash-push:command",
+    "switch:command",
+    "tag-create:command",
+    "push:command"
+  ],
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  },
+  "C_Cpp.clang_format_style": "WebKit",
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#dd0531"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#61dafb"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Svelte Orange",
+      "value": "#ff3d00"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ],
+  "editor.lineNumbers": "off",
+  "diffEditor.renderSideBySide": false,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.indentation": false,
+  "code-runner.ignoreSelection": true,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "zenMode.hideStatusBar": false,
+  "zenMode.centerLayout": false,
 
-
-    
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ],
+    "[One Dark Pro]": {
+      "comments": "#333"
+    },
+    "[Visual Studio Dark]": {
+      "comments": "#444"
+    },
+    "[Default Dark+]": {
+      "comments": "#444"
+    },
+    // something here for ref.
+    "[GitHub Light]": {
+      "comments": "#ccc"
+    },
+    "[Default Light+]": {
+      "comments": "#98c9a3"
+    }
+  },
+  "workbench.preferredDarkColorTheme": "One Dark Pro",
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "window.menuBarVisibility": "toggle",
+  "explorer.autoReveal": "focusNoScroll",
+  "workbench.editor.closeEmptyGroups": false,
+  "window.dialogStyle": "custom",
+  "window.titleBarStyle": "custom",
+  "workbench.editor.enablePreview": false,
+  "editor.renderWhitespace": "none",
+  "vsicons.dontShowNewVersionMessage": true,
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1666346163788,
+  "editor.lineHeight": 30,
+  "editor.fontWeight": "normal",
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "editor.fontSize": 19,
+  "editor.fontFamily": "cartograph cf",
+  "editor.minimap.enabled": false,
+  "C_Cpp.default.browse.path": ["/**/includes/"],
+  "gitlens.views.commits.files.layout": "list",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "oneDarkPro.editorTheme": "Just Black",
+  // "editor.fontLigatures": "'calt', 'ss01'",
+  // "editor.fontLigatures": "on",
+  "editor.fontLigatures": "'ss02' on",
+  "workbench.colorTheme": "One Dark Pro",
+  // "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'"
+  // "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar"
 }
 
